@@ -1,0 +1,45 @@
+/* Apply styles to body and html for full height and no margin/padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('your-image-url.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Make the background image cover the entire screen */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Optional styles for the content (e.g., header) */
+h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 768px) {
+  body, html {
+    background-attachment: scroll; /* Change background to scroll on mobile for better performance */
+  }
+
+  .container {
+    padding: 10px; /* Add padding on mobile to avoid content touching screen edges */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Smaller font size on mobile */
+  }
+}
